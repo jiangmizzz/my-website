@@ -8,8 +8,8 @@
 
 $doc-font-size: 16px !default;
 $doc-font-size-medium: $doc-font-size * 1 !default;
-$doc-font-size-large: $doc-font-size * 1.1 !default;
-$doc-font-size-x-large: $doc-font-size * 1.2 !default;
+$doc-font-size-large: $doc-font-size * 1.05 !default;
+$doc-font-size-x-large: $doc-font-size * 1.1 !default;
 
 /* paragraph indention */
 $paragraph-indent: false !default; // true, false (default)
@@ -186,7 +186,7 @@ $small: 600px !default;
 $medium: 768px !default;
 $medium-wide: 900px !default;
 $large: 1024px !default;
-$x-large: 1320px !default;  //origin: 1280px
+$x-large: 1280px !default;  //origin: 1280px
 $max-width: $x-large !default;
 // from domoritz
 $on-palm:          600px;
