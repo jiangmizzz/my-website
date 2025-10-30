@@ -23,7 +23,7 @@ This is the first barrier I encountered. MacOS does not support installing Jekyl
 
 To solve this problem, I tried to search the answer on Stack Overflow and have asked genAI for many times, but it didn't work. Finally, I refered to this [official guidance](https://jekyllrb.com/docs/installation/macos/) and successfully solved the problem by installing the `chruby`. It was really helpful.
 
-A successful installation is indicated by entering the following command in the terminal and then seeing `jekyll x.x.x` as the output:
+A successful installation is indicated by entering the following command in the terminal and then seeing `jekyll x.x.x` as the output: 
 ```terminal
 $ jekyll -v 
 ```
