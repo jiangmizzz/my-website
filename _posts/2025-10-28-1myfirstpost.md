@@ -10,6 +10,7 @@ toc_icon: "paw"  # corresponding Font Awesome icon name (without fa prefix)
 toc_sticky: true
 ---
 Welcome, this is my first post on my personal website! And I will share some insights I gained during the website building process.
+--> [Github repository](https://github.com/jiangmizzz/my-website)
 
 ## Overview
 I seleceted [Mimimal Mistake](https://mmistakes.github.io/minimal-mistakes/) to build the first darft of my website because I really want to have a personal website equipped with blog function and can be customized.
@@ -18,7 +19,7 @@ When starting my work, I also took the [academicpages](https://github.com/academ
 
 ## Details & Insights
 ### Install Jekyll on MacOS
-This is the first barrier I encountered. MacOS does not support install Jekyll directly, otherwise you'll suffer from the trouble of installation failure and error `jekyll: command not found`.
+This is the first barrier I encountered. MacOS does not support installing Jekyll directly, otherwise you'll suffer from the trouble of installation failure and error `jekyll: command not found`.
 
 To solve this problem, I tried to search the answer on Stack Overflow and have asked genAI for many times, but it didn't work. Finally, I refered to this [official guidance](https://jekyllrb.com/docs/installation/macos/) and successfully solved the problem by installing the `chruby`. It was really helpful.
 
