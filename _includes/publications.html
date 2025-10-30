@@ -1,0 +1,11 @@
+{% if site.publications %}
+  {% assign pubs = site.publications | sort: "year" | reverse %}
+  <div class="pubs">
+    {% for pub in pubs %}
+      {% include publication.html pub=pub %}
+    {% endfor %}
+  </div>
+{% else %}
+  <p><em>No publications found.</em></p>
+{% endif %}
+

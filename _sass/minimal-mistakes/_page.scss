@@ -115,6 +115,8 @@ body {
   /* paragraph indents */
   p {
     margin: 0 0 $indent-var;
+    margin-right: 0.5em;   //gap between the content and toc
+    text-align: $text-align;
 
     /* sibling indentation*/
     @if $paragraph-indent == true {
