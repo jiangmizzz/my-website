@@ -13,7 +13,7 @@ Welcome, this is my first post on my personal website! And I will share some ins
 --> [Github repository](https://github.com/jiangmizzz/my-website)
 
 ## Overview
-I seleceted [Mimimal Mistake](https://mmistakes.github.io/minimal-mistakes/) to build the first darft of my website because I really want to have a personal website equipped with blog function and can be customized.
+I selected [Mimimal Mistake](https://mmistakes.github.io/minimal-mistakes/) to build the first darft of my website because I really want to have a personal website equipped with blog function and can be customized.
 
 When starting my work, I also took the [academicpages](https://github.com/academicpages/academicpages.github.io), [al-folio](https://github.com/alshedivat/al-folio) and other highly complete templates into my consideration. And after my exploration and practice, I think it might be a much easier way to use them:D, although they didn't quite meet my needs in some aspects. I encountered amounts of obstacles in this process, which I will mention below.
 
