@@ -41,6 +41,24 @@ It was not a very simple matter though, because it requires you to learn the bas
 -- This problem happened when I wanted to set a convenient archive system for my posts. Although the problem is solved, I still don't understand why it occurred...
 {: .notice}
 
+### Stylesheets Updating Issue
+This issue was caused by **caching**. I roughly knew it when it appeared, but it puzzled me for a long time. Simply put, after I updated the styles and completed the automatic redeployment on the server, the styles I wanted did not appear on the refreshed page.
+
+- × I tried to clear the **browser chche** immediately, but it did not work. 
+- × Then, I suspected the web content wasn't correctly redeployed. To verify, I entered the folder `website-builds` and searched the contents in `/assets/css/main.css`. The result was that this file was already the latest version.
+- × Maybe the **jekyll cache** on server caused this problem? So I exec the following line: `rm -rf .jekyll-cache _site` to clear the jekyll-cache in site folder.
+- × Open the browser console (`Fn` + `f12`) and forced a cache refresh (`cmd` + `shift` + `r`). Nothing happened. and I found the status code of the css file showed in `Network > css` is 200, not 304, which seemed to be wired.
+- × I tried to clear the **DNS cache** of my domain on cloudflare.
+- ✔️ The final solution which I found is: Enter the `/_includes/head.html`, and replace the CSS link with one that includes a build timestamp parameter:
+  ```html
+  {% raw %}<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">{% endraw %}
+  ```
+  In this way, the browser is forced to retrieve the latest version of the stylesheet file each time the website is redeployed, thus avoiding the problem of styles not updating due to old caches.
+
+But I'm still curious about why this issue occurs. It seemed like to be caused by browser cache: <u>Before I fixed this style problem</u>, when I accessed this css file via terminal (both on server and local), it was always the updated one. But if I approached to access it by browser without the postfix of `nocache=1`, it showed the older stylesheet... quite wired...o(╥﹏╥)o
+
+If anyone knew why did this occur, I would greatly appreciate it if you could tell me.
+
 ### Favicon
 Actually, the official docs does not contain the tutorial on setting up a favicon. But it is quite easy. Just enter the `/_includes/head/custom.html` and add a line of code like this: 
 ```html
